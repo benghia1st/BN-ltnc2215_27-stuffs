@@ -29,7 +29,7 @@ int main()
 	}
 
 	delete [] arr;
-	return main();
+	return main(); // Restart the program. Ctrl + C to end. Otherwise replace this with "return 0;"
 
 }
 
