@@ -1,4 +1,4 @@
-/* V2. (dog)English(maybe) version */
+/* V2.1 (dog)English(maybe) version */
 
 // Libraries
 #include <iostream>
@@ -12,10 +12,10 @@ void printArray(int *arr, int size);
 // Main
 int main()
 {
-	/* Khai bao va khoi tao */
+	/* Initialization */
 	//const int NUMBER = 5; // Unused
 	int NUMBER = 0;
-	cout << "Nhap so luong phan tu trong mang: ";
+	cout << "Input the number of elements in the Array: ";
 	cin >> NUMBER;
 	
 	int *arr = new int[NUMBER]; // Remember to delete it!
@@ -24,7 +24,7 @@ int main()
 	/* Fill, print and search the Array */
 	fillArray(arr, NUMBER);
 	printArray(arr, NUMBER);
-	cout << "Nhap so can tim: ";
+	cout << "Input the number you are looking for: ";
 	cin >> key;
 	bool result = search(arr, NUMBER, key);
 
