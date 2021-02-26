@@ -1,6 +1,9 @@
+/* V2. (dog)English(maybe) version */
+
 // Libraries
 #include <iostream>
 using namespace std;
+
 // Function Signatures
 void fillArray(int *arr, int size);
 bool search(int *arr, int size, int key);
@@ -9,26 +12,33 @@ void printArray(int *arr, int size);
 // Main
 int main()
 {
-	const int NUMBER = 5;
-	int *arr = new int[NUMBER];
+	/* Khai bao va khoi tao */
+	//const int NUMBER = 5; // Unused
+	int NUMBER = 0;
+	cout << "Nhap so luong phan tu trong mang: ";
+	cin >> NUMBER;
+	
+	int *arr = new int[NUMBER]; // Remember to delete it!
 	int key = 0;
 	
+	/* Fill, print and search the Array */
 	fillArray(arr, NUMBER);
 	printArray(arr, NUMBER);
-	cout << "Input key: ";
+	cout << "Nhap so can tim: ";
 	cin >> key;
 	bool result = search(arr, NUMBER, key);
 
 	if (result)
 	{
-		cout << "Co " << key << " ton tai trong mang.\n";
+		cout << "There is " << key << " in the Array.\n";
 	}
 	else
 	{
-		cout << "Khong co " << key << " o trong mang.\n"; 
+		cout << "The is no " << key << " in the Array.\n"; 
 	}
 
-	delete [] arr;
+	/* End of program */
+	delete [] arr; // Delete the pointer.
 	return main(); // Restart the program. Ctrl + C to end. Otherwise replace this with "return 0;"
 
 }
@@ -38,7 +48,7 @@ void fillArray(int *arr, int size)
 {
 	for (int i = 0; i < size; ++i)
 	{
-		cout << "Nhap phan tu thu " << i << " : ";
+		cout << "Input the " << i << " numbered element : ";
 		int temp = 0;
 		cin >> temp;
 		arr[i] = temp;
@@ -48,7 +58,7 @@ void fillArray(int *arr, int size)
 
 void printArray(int arr[], int size)
 {
-	cout << "Cac phan tu trong mang: ";
+	cout << "Elements of the Array: ";
 	for (int i = 0; i < size; ++i)
 	{
 		cout << arr[i] << " ";
