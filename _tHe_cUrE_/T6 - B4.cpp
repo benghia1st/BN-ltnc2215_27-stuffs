@@ -11,7 +11,7 @@ int main()
 	ifstream love;
 	string path = "";
 	//cout << "PATH TO LOVE: ";
-  cin >> path;
+ 	cin >> path;
 
 	love.open(path);
 	if (love.fail() == true)
@@ -67,4 +67,27 @@ int main()
     + Nếu điểm bạn đó bằng với i thì in ra tên. Do đã được sắp xếp theo tên nên đầu ra hợp lệ.
     
     <Tự đánh giá> Code chưa chú thích, chưa phân thành hàm, chưa thực sự tối ưu <đã nêu trên>.
+*/
+
+/* Ví dụ: LOVE.txt
+-INPUT <LOVE.txt>:-
+10,Dai Ca Giang Ho
+9,Kha Ba Ngo
+2,Ngo Ba Kha
+3,Chu Cuoi
+5,Chu Dong Tu
+5,Le Van Hews
+3,Cac Cu Co Cau
+2,Cac Cau Co
+
+-OUTPUT:-
+Dai Ca Giang Ho
+Kha Ba Ngo
+Chu Dong Tu
+Le Van Hews
+Cac Cu Co Cau
+Chu Cuoi
+Cac Cau Co
+Ngo Ba Kha
+	
 */
