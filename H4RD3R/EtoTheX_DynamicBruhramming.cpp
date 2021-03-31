@@ -5,7 +5,7 @@ using namespace std;
 
 const double EPSILON = 0.001;
 
-// Chuỗi e^x = Tổng sigma từ x^0/0! cho đến x^n/n! (thỏa mãn x^n/n! < sai số)
+// Chuỗi e^x = Tổng sigma từ x^0/0! cho đến x^n/n! (thỏa mãn Tổng sau - Tổng trước < Sai số)
 long double findE(long double x)
 {
 	long double output = 0.0f;
